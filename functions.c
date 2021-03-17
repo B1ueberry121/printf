@@ -76,6 +76,14 @@ int _printstring(va_list vl)
 	return (_putstring(s));
 }
 
+/**
+ * convert - converts chars to int
+ * @num: number
+ * @base: base of code
+ * @flag: temporary flag
+ * Return: the result
+ */
+
 int convert(unsigned int num, int base, int flag)
 {
 	static char Lower[] = "0123456789abcdef";

@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 					format++;
 					break;
 				case 'b':
-					count += convert(va_arg(arg, int), 2, 0);
+					count += convert(va_arg(arg, unsigned int), 2, 0);
 					format++;
 					break;
 				case 'o':
