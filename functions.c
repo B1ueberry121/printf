@@ -75,3 +75,35 @@ int _printstring(va_list vl)
 	}
 	return (_putstring(s));
 }
+
+/**
+ * convert - converts chars to int
+ * @num: number
+ * @base: base of code
+ * @flag: temporary flag
+ * Return: the result
+ */
+
+int convert(unsigned int num, int base, int flag)
+{
+	static char Lower[] = "0123456789abcdef";
+	static char Upper[] = "0123456789ABCDEF";
+	int print;
+	static char buffer[50];
+	char *ptr;
+
+	ptr = &buffer[49];
+	*ptr = '\0';
+
+	do
+	{
+		if (flag == 0)
+			*--ptr = Lower[num % base];
+		else
+			*--ptr = Upper[num % base];
+		num /= base;
+	} while (num != 0);
+
+	print = _puts(ptr);
+	return (print);
+}

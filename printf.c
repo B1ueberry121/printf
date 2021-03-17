@@ -2,7 +2,7 @@
 
 /**
  * _printf - works like printf
- * @format: modules
+ * @format: all argumenets recieved as an input
  * Return: count
  */
 
@@ -37,6 +37,22 @@ int _printf(const char *format, ...)
 				case 'd':
 				case 'i':
 					count += _printDec(arg);
+					format++;
+					break;
+				case 'x':
+					count += convert(va_arg(arg, int), 16, 0);
+					format++;
+					break;
+				case 'X':
+					count += convert(va_arg(arg, int), 16, 1);
+					format++;
+					break;
+				case 'b':
+					count += convert(va_arg(arg, unsigned int), 2, 0);
+					format++;
+					break;
+				case 'o':
+					count += convert(va_arg(arg, int), 8, 0);
 					format++;
 					break;
 				default:
