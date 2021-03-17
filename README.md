@@ -20,7 +20,7 @@ for the printf function.
 
 Here is a layout of the printf function:
 
-int _printf(const char *format, ...)
+int printf(const char \*format, ...)
 {
 	int count = 0;
 	va_list arg;
@@ -41,27 +41,20 @@ int _printf(const char *format, ...)
 					format++;
 					break;
 
----------------------------------------------------------------->
+
+
 ##Test cases
 
 The following are printf test cases for the function to see if it works:
 
-printf("String:[%s]\n", NULL); //We compare our _printf to printf if returns the same thing, success//
-printf("Char:[%c]\n", NULL);
-_printf("Char:[%c]\n", NULL);
-_printf("String:[%s]\n", NULL);
-_printf("Char:[%c]\n");
-printf("Char:[%c]\n");
-printf("String: i'm %d years old and %s\n" ,age, "Hey!");
-_printf("String: i'm %d years old %s\n" ,age, "Hey!");
-_printf("String:[%s]\n", phrase);
-printf("String:[%s]\n", phrase);
-[11:10 AM]
-len = _printf("Percent:[%%]\n%");
-len2 = printf("Percent:[%%]\n%");
-_printf("Len:[%d]\n", len);
+printf("String:[%s]\n", NULL); //We compare our \_printf to printf if returns the same thing, success//
+\_printf("String:[%s]\n", NULL);
+printf("Char[%c]:\n", NULL):
+\_printf("Char[%c]:\n", NULL);
+printf("Char[%c]:\n");
+\_print("Char[%c]:\n");
 printf("Len:[%d]\n", len2);
-
+\_printf("Len:[%d]\n", len);
 
 ### Authors
 Christian Laboy && Gabriel Martinez
