@@ -8,9 +8,9 @@
 
 int _printDec(va_list arg)
 {
-	int arguments;
-	int count = 0;
-	int div;
+	long int arguments;
+	long int count = 0;
+	long int div;
 
 	arguments = va_arg(arg, int);
 
@@ -68,5 +68,10 @@ int _printstring(va_list vl)
 	char *s;
 
 	s = (char *)va_arg(vl, char *);
+
+	if (*s == NULL)
+	{
+		s = "(null)";
+	}
 	return (_putstring(s));
 }
