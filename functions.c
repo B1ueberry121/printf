@@ -25,7 +25,7 @@ int _printDec(va_list arg)
 		arguments = -arguments;
 		count++;
 	}
-	else if (arguments >= 0)
+	if (arguments >= 0)
 	{
 		div = 1;
 		while (div <= arguments)
