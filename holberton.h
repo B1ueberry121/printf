@@ -3,6 +3,7 @@
 
 #include <unistd.h>
 #include <stdarg.h>
+#include <limits.h>
 
 #define SPECIAL_CHAR '%'
 
