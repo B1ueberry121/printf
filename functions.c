@@ -69,7 +69,7 @@ int _printstring(va_list vl)
 
 	s = (char *)va_arg(vl, char *);
 
-	if (*s == NULL)
+	if (s == NULL)
 	{
 		s = "(null)";
 	}
