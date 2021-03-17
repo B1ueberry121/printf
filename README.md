@@ -20,7 +20,9 @@ for the printf function.
 
 Here is a layout of the printf function:
 
+
 int printf(const char \*format, ...)
+
 {
 	int count = 0;
 	va_list arg;
@@ -40,21 +42,23 @@ int printf(const char \*format, ...)
 					count += _putchar('%');
 					format++;
 					break;
+			}
+		}
+	}
+return(count);
+}
 
 
 
-##Test cases
+### Test cases
 
-The following are printf test cases for the function to see if it works:
+The following are printf test cases for the printf function to see if it works:
 
-printf("String:[%s]\n", NULL); //We compare our \_printf to printf if returns the same thing, success//
+printf("String:[%s]\n", NULL); //We compare to see if both functions have the same return, then SUCCESS!//
 \_printf("String:[%s]\n", NULL);
-printf("Char[%c]:\n", NULL):
-\_printf("Char[%c]:\n", NULL);
-printf("Char[%c]:\n");
-\_print("Char[%c]:\n");
-printf("Len:[%d]\n", len2);
-\_printf("Len:[%d]\n", len);
+printf("Char:[%c]\n", NULL);
+\_printf("Char:[%c]\n", NULL);
+
 
 ### Authors
 Christian Laboy && Gabriel Martinez
