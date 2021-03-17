@@ -16,16 +16,16 @@ int _printDec(va_list arg)
 
 	if (arguments == 0)
 	{
-		_putchar('\0');
+		_putchar(48);
 		count++;
 	}
-	else if (arguments < 0)
+	if (arguments < 0)
 	{
 		_putchar('-');
 		arguments = -arguments;
 		count++;
 	}
-	if (arguments > 0)
+	else if (arguments >= 0)
 	{
 		div = 1;
 		while (div <= arguments)
