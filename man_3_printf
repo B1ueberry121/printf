@@ -1,4 +1,4 @@
-.TH _PRINTF(1) 2021-03-16 GNU
+.TH _PRINTF(3) "2021-03-16" GNU
 .SH NAME
 _printf - format and prints data
 .SH SYPNOSIS
@@ -10,7 +10,7 @@ string that specifies how output should be seen
 .SH DESCRIPTION
 Print ARGUMENT(s) according to  its specifier:
 .SH Return Value
-On success, will return numbers of characters to standard output. On error negative value will be returned.
+On success, will return numbers of characters to standard output. On error negative value (-1) will be returned.
 
 .SH FORMAT SPECIFIERS
 .B Character ' % '
@@ -33,10 +33,14 @@ Arguments passed down to function will print integers with decimal format
 .TP
 .BR -x
 Arguments passed down to function will print integers in hexadecimal format
+.SH EXAMPLE
+ To print what is today's date and temperature, where months and days are pointers to strings
 
+ _printf("%s,  %s,  %d, %d",
+        month, day, year, temperature);
 
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Christian Laboy, Gabriel Martinez
+Christian Laboy && Gabriel Martinez
 
